@@ -64,6 +64,9 @@ terraform destroy -var "db_username=xxxx" -var "db_password=xxxx" -auto-approve
 
 The terraform destroy command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.
 
+### Run this module through jenkins
+Create jenkins pipeline using given jenkinsfile and run it with required parameters.
+
 ### Links
 
 [MediaWiki Installation](https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Red_Hat_Linux)
