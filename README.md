@@ -53,13 +53,13 @@ The terraform apply command is used to apply all changes to the project infrastr
 * Wait for couple of minutes(be patient) before mediawiki is being installed and configured. 
 * Once `terraform appy` command is executed successfully then, connect to created ec2 instance through ssh and monitor `user_data.sh` logs at this location /var/log/cloud-init-output.log
 * Again be patient and trail the log /var/log/cloud-init-output.log until you get the message `[INFO] Mediawiki installation has been completed.`
-* Now get `Public IP` of EC2 instance and hit it in browser. The mediawiki will be accessible on port 80 through url http://<public ip> or http://<public ip>:80
+* Now get `Public IP` of EC2 instance and hit it in browser. The mediawiki will be accessible on port 80 through url http://\<public ip\> or http://\<public ip\>:80
   
 
 ### Destroy created resources
 
 ```
-terraform destroy -auto-approve
+terraform destroy -var "db_username=xxxx" -var "db_password=xxxx" -auto-approve
 ```
 
 The terraform destroy command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.
